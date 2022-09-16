@@ -1,0 +1,12 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.eatables {
+  .desktop-img {
+    @include flex(row, center, center);
+    img {
+      width: 25%;
+      display: block;
+    }
+  }
+}

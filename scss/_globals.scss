@@ -1,0 +1,55 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-size: $font-s;
+  font-family: $barlow;
+  line-height: 1.75rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.mobile-img {
+  display: none;
+}
+
+.title {
+  font-family: $fraunces;
+  font-weight: 900;
+  &--fs-s {
+    font-size: $font-s;
+    color: $very-dark-desaturated-blue;
+  }
+  &--fs-m {
+    font-size: $font-m;
+    color: $grayish-blue;
+    letter-spacing: 0.5rem;
+    margin-bottom: 5rem;
+  }
+  &--fs-l {
+    font-size: $font-l;
+  }
+  &--fs-xl {
+    font-size: $font-xl;
+    color: $very-dark-desaturated-blue;
+    padding-right: 2.5rem;
+    line-height: 2.75rem;
+  }
+  &--fs-xxl {
+    font-size: $font-xxl;
+    color: $white;
+    margin-block: 8rem 6rem;
+  }
+}

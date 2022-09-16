@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.testimonials-container {
+  margin: 10rem;
+  text-align: center;
+}
+
+.testimonials {
+  @include flex(row, center, center);
+  div {
+    img {
+      width: 4.5rem;
+      border-radius: 50%;
+    }
+    p {
+      color: $very-dark-grayish-blue;
+      padding: 4rem 2rem;
+    }
+
+    &:nth-child(2) > p {
+      padding-inline: 5rem;
+    }
+    span {
+      font-size: $font-xs;
+      color: $grayish-blue;
+    }
+  }
+}

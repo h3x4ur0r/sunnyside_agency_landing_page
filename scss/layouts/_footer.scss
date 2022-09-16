@@ -1,0 +1,10 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+footer {
+  background-color: hsl(168, 44%, 68%);
+  text-align: center;
+  a {
+    color: $dark-moderate-cyan;
+  }
+}

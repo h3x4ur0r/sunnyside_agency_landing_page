@@ -1,0 +1,38 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+header {
+  background-image: url("/images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  @include flex(row, space-between, center);
+  margin-top: 0.5rem;
+}
+
+nav {
+  @include flex(row, center, center);
+}
+
+li {
+  font-size: $font-s;
+  list-style-type: none;
+  margin-inline: 1.5rem;
+}
+
+li > a {
+  color: white;
+}
+
+.contact {
+  font-family: $fraunces;
+  background-color: $white;
+  color: $very-dark-desaturated-blue;
+  padding: 1.375rem 2rem;
+  border-radius: 2rem;
+}

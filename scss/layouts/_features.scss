@@ -1,0 +1,26 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.features {
+  @include flex(row, center, center);
+  &__col {
+    @include flex(column, flex-end, center);
+    width: 50%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  &__col--green {
+    background-image: url(/images/desktop/image-graphic-design.jpg);
+    color: $dark-desaturated-cyan;
+  }
+  &__col--blue {
+    background-image: url(/images/desktop/image-photography.jpg);
+    color: $dark-blue;
+  }
+}
+
+.features__col>p {
+    padding: 1.5rem 13rem 4rem;
+}
