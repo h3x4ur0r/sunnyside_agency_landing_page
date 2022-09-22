@@ -4,3 +4,21 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin large {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

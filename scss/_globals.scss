@@ -13,6 +13,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-size: $font-s;
   font-family: $barlow;
   line-height: 1.75rem;
@@ -51,5 +52,47 @@ body {
     font-size: $font-xxl;
     color: $white;
     margin-block: 8rem 6rem;
+    letter-spacing: 0.5rem;
+  }
+  &--red {
+    position: relative;
+    z-index: 99;
+    &:hover::before {
+      filter: opacity(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      border-radius: 15%;
+      left: -5px;
+      right: 0;
+      height: 8px;
+      width: 110%;
+      z-index: -1;
+      background-color: $soft-red;
+      filter: opacity(0.4);
+    }
+  }
+  &--yellow {
+    position: relative;
+    z-index: 99;
+    &:hover::before {
+      filter: opacity(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      z-index: -1;
+      border-radius: 15%;
+      left: -5px;
+      right: 0;
+      height: 8px;
+      width: 110%;
+      z-index: -1;
+      background-color: $yellow;
+      filter: opacity(0.4);
+    }
   }
 }
