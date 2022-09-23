@@ -15,17 +15,17 @@
     }
   }
   &__col--green {
-    background-image: url(/images/desktop/image-graphic-design.jpg);
+    background-image: url(../images/desktop/image-graphic-design.jpg);
     color: $dark-desaturated-cyan;
     @include small {
-      background-image: url(/images/mobile/image-graphic-design.jpg);
+      background-image: url(../images/mobile/image-graphic-design.jpg);
     }
   }
   &__col--blue {
-    background-image: url(/images/desktop/image-photography.jpg);
+    background-image: url(../images/desktop/image-photography.jpg);
     color: $dark-blue;
     @include small {
-      background-image: url(/images/mobile/image-photography.jpg);
+      background-image: url(../images/mobile/image-photography.jpg);
     }
   }
   @include small {
