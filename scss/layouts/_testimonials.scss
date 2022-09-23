@@ -2,13 +2,25 @@
 @use "../variables" as *;
 
 .testimonials-container {
-  margin: 10rem;
+  padding: 10rem;
   text-align: center;
+  @include medium {
+    padding: 4.5rem;
+  }
+  @include small {
+    padding: 3.5rem 2.6rem 4rem;
+  }
 }
 
 .testimonials {
   @include flex(row, center, center);
+  @include small {
+    @include flex(column, center, center);
+  }
   div {
+    @include small {
+      padding-top: 3.5rem;
+    }
     img {
       width: 4.5rem;
       border-radius: 50%;
@@ -16,10 +28,27 @@
     p {
       color: $very-dark-grayish-blue;
       padding: 4rem 2rem;
+      @include large {
+        padding-inline: 1rem;
+      }
+      @include medium {
+        padding-inline: 0.5rem;
+      }
+      @include small {
+        padding: 2rem 0;
+      }
     }
-
     &:nth-child(2) > p {
       padding-inline: 5rem;
+      @include large {
+        padding-inline: 3.5rem;
+      }
+      @include medium {
+        padding-inline: 2rem;
+      }
+      @include small {
+        padding-inline: 0;
+      }
     }
     span {
       font-size: $font-xs;

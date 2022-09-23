@@ -11,9 +11,24 @@
   height: 90vh;
 }
 
+.brand-extension > div {
+  @include medium {
+    height: 70vh;
+  }
+  @include small {
+    @include flex(column, flex-start, center);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .brand-extension > div > div {
   width: 50%;
   height: 100%;
+  @include small {
+    width: 100%;
+  }
 }
 
 .right-col > img {
@@ -24,9 +39,21 @@
 .left-col {
   background-color: $white;
   padding: 10rem;
+  @include medium {
+    padding: 7rem 5rem;
+  }
+  @include small {
+    padding: 3.5rem 2rem;
+  }
   p {
     color: $very-dark-grayish-blue;
     padding: 3.125rem 3rem 3.125rem 0;
+    @include large {
+      padding-right: 0;
+    }
+    @include small {
+      padding: 1.5rem 0 2rem;
+    }
   }
   a {
     color: $very-dark-desaturated-blue;

@@ -4,8 +4,16 @@
 .eatables {
   .desktop-img {
     @include flex(row, center, center);
+    @include small {
+      display: none;
+    }
     img {
       width: 25%;
+      display: block;
+    }
+  }
+  .mobile-img {
+    img {
       display: block;
     }
   }

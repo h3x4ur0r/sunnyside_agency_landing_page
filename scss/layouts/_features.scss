@@ -10,17 +10,38 @@
     background-size: cover;
     background-position: center;
     text-align: center;
+    @include small {
+      width: 100%;
+    }
   }
   &__col--green {
     background-image: url(/images/desktop/image-graphic-design.jpg);
     color: $dark-desaturated-cyan;
+    @include small {
+      background-image: url(/images/mobile/image-graphic-design.jpg);
+    }
   }
   &__col--blue {
     background-image: url(/images/desktop/image-photography.jpg);
     color: $dark-blue;
+    @include small {
+      background-image: url(/images/mobile/image-photography.jpg);
+    }
+  }
+  @include small {
+    @include flex(column, flex-start, center);
   }
 }
 
-.features__col>p {
-    padding: 1.5rem 13rem 4rem;
+.features__col > p {
+  padding: 1.5rem 13rem 4rem;
+  @include large {
+    padding-inline: 11rem;
+  }
+  @include medium {
+    padding-inline: 5rem;
+  }
+  @include small {
+    padding: 0 1rem 4rem;
+  }
 }
