@@ -28,14 +28,6 @@ header {
   }
 }
 
-.hamburger {
-  display: none;
-  @include small {
-    display: block;
-    width: 1.5rem;
-  }
-}
-
 nav {
   @include flex(row, center, center);
   @include small {
@@ -49,7 +41,7 @@ nav {
       color: white;
     }
   }
-  .contact {
+  .contact-button > a {
     font-family: $fraunces;
     background-color: $white;
     color: $very-dark-desaturated-blue;
@@ -60,5 +52,56 @@ nav {
       color: $white;
       transition: ease-in-out 0.2s all;
     }
+  }
+}
+
+.hamburger {
+  display: none;
+  @include small {
+    display: block;
+    width: 1.5rem;
+  }
+}
+
+#mob-nav {
+  @include small {
+
+  display: none;
+  position: absolute;
+  inset: 0;
+  inset-inline: 1.5rem;
+  top: 7rem;
+  background-color: $white;
+  min-width: 20.5rem;
+  height: 20rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
+    border-right: 2rem solid $white;
+  }
+
+  li {
+    margin-block: 2rem;
+  }
+
+  a {
+    color: $dark-grayish-blue;
+    font-size: $font-m;
+  }
+
+  .contact-button {
+    margin-top: 3rem;
+    a {
+      background-color: $yellow;
+      color: $very-dark-desaturated-blue;
+    }
+  }
   }
 }
