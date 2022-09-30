@@ -23,8 +23,13 @@ header {
 
 .header-logo {
   width: 10rem;
+  transition: 0.5s ease all;
   @include small {
     width: 9rem;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: rotate(180deg)
   }
 }
 
@@ -39,6 +44,10 @@ nav {
     margin-inline: 1.5rem;
     a {
       color: white;
+      &:hover {
+        border-bottom: solid 2px white;
+        padding-bottom: 0.1rem;
+      }
     }
   }
   .contact-button > a {
@@ -104,4 +113,18 @@ nav {
     }
   }
   }
+}
+
+.arrow-down {
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
 }
